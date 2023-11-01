@@ -1,0 +1,217 @@
+@import "mixins.scss";
+@import "resets.scss";
+@import "variables.scss";
+
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.container {
+  @include contentPadding;
+}
+
+.navbar {
+  @include flexCenter;
+  background-color: $darkBlueBg;
+  height: 6rem;
+  // width: 100vw;
+  .container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .logo {
+      font-size: 2.4rem;
+      color: #f9faf8;
+      font-weight: 900;
+    }
+    .button-group {
+      font-size: 1.8rem;
+      font-weight: 400;
+      display: flex;
+      justify-content: space-between;
+      gap: 0 5rem;
+    }
+  }
+}
+
+.hero-panel {
+  @include flexCenter;
+  background-color: $darkBlueBg;
+  height: 75vh;
+  width: 100%;
+  .container {
+    @include flexCenter;
+    gap: 5rem;
+    & > * {
+      flex: 1;
+    }
+    .left {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      gap: 2rem;
+      .hero-header {
+        font-size: 4.8rem;
+        font-weight: 900;
+        color: #f9faf8;
+      }
+      .hero-subtext {
+        font-size: 1.8rem;
+        font-weight: 400;
+        color: #e5e7eb;
+      }
+      .sign-up-btn {
+        @include flexCenter;
+        background-color: #3882f6;
+        height: 5rem;
+        width: 15rem;
+        border-radius: 8px;
+        span {
+          font-size: 1.8rem;
+          font-weight: 900;
+        }
+      }
+    }
+    .right {
+      .img {
+        @include flexCenter;
+        height: 30rem;
+        width: 100%;
+        background-color: gray;
+      }
+      color: #f9faf8;
+      font-size: 1.8rem;
+    }
+  }
+}
+
+.info-panel {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 5rem;
+  height: 60vh;
+  .container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    // background-color: red;
+    .header {
+      font-size: 3.6rem;
+      font-weight: 900;
+      color: #1f2937;
+    }
+    .card-group-container {
+      @include flexCenter;
+      gap: 5rem;
+      margin-top: 5rem;
+      .card-group {
+        @include flexCenter;
+        flex-direction: column;
+        gap: 2rem;
+        width: 15rem;
+        .card-img {
+          height: 15rem;
+          width: 100%;
+          outline: #3882f6 solid 3px;
+          border-radius: 6px;
+        }
+        .card-desc {
+          font-size: 1.4rem;
+          word-wrap: normal;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+.quote-panel {
+  @include flexCenter;
+  height: 60vh;
+  background-color: #e5e7eb;
+  .container {
+    @include flexCenter;
+    flex-direction: column;
+    margin: 0 40rem;
+    .main-quote {
+      font-size: 3.6rem;
+      font-weight: 300;
+      font-style: italic;
+    }
+    .quote-author {
+      width: 100%;
+      font-size: 2.4rem;
+      font-weight: 900;
+      text-align: right;
+    }
+  }
+}
+
+.cta-panel {
+  @include flexCenter;
+  height: 50vh;
+  background-color: #f9faf8;
+  .container {
+    @include flexCenter;
+    width: 100%;
+    height: 15rem;
+    background-color: #3882f6;
+    border-radius: 10px;
+    .cta-card {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      margin: 0 10rem;
+      .left {
+        display: flex;
+        flex-direction: column;
+        .header {
+          font-size: 2.4rem;
+          color: #f9faf8;
+          font-weight: 900;
+        }
+        .body {
+          font-size: 1.8rem;
+          color: #e5e7eb;
+          font-weight: 300;
+        }
+      }
+      .right {
+        .cta-sign-up-btn {
+          @include flexCenter;
+          height: 4rem;
+          width: 14rem;
+          outline: white solid 2px;
+          border-radius: 3px;
+          span {
+            font-size: 1.8rem;
+            font-weight: 500;
+          }
+        }
+      }
+    }
+  }
+}
+
+.footer {
+  @include flexCenter;
+  background-color: $darkBlueBg;
+  height: 20vh;
+  .container {
+    @include flexCenter;
+    .footer-text {
+      color: #f9faf8;
+      font-size: 1.8rem;
+    }
+  }
+}

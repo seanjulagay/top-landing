@@ -1,0 +1,13 @@
+// * {
+//   outline: green solid 2px;
+// }
+
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin contentPadding {
+  margin: 0 20rem;
+}
